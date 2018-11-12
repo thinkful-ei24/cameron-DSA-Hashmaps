@@ -46,7 +46,7 @@ class HashMap{
     for(let i=start; i<start + this._capacity; i++){
       const index = i % this._capacity;
       const slot = this._slots[index];
-      if(slot === undefined || (slot.key == key && !slot.deleted)){
+      if(slot === undefined || (slot.key === key && !slot.deleted)){
         return index;
       }
     }
@@ -79,3 +79,5 @@ class HashMap{
 
 HashMap.MAX_LOAD_RATIO = 0.9;
 HashMap.SIZE_RATIO = 3;
+
+module.exports = HashMap;
